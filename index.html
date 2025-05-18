@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkillSprint Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">BrainBoard</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <label class="switch">
+        <input type="checkbox" id="mode-toggle" />
+        <span class="slider round"></span>
+      </label>
+    </nav>
+  </header>
+
+  <section class="dashboard">
+
+    <!-- Flashcard Viewer -->
+    <div class="card">
+      <h3>🧠 Flashcard Viewer</h3>
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-inner">
+          <div class="front">Q: What is HTML?</div>
+          <div class="back">A: Markup language for web pages</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quiz App -->
+    <div class="card">
+      <h3>📝 Quiz App</h3>
+      <div class="example">
+        <p>What does CSS stand for?</p>
+        <ul>
+          <li>Creative Style Sheets</li>
+          <li><strong>Cascading Style Sheets</strong></li>
+          <li>Computer Style Structure</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Daily Habit Checklist -->
+    <div class="card">
+      <h3>📅 Daily Habit Tracker</h3>
+      <div class="example checklist">
+        <label><input type="checkbox" checked> Workout</label><br />
+        <label><input type="checkbox"> Study</label><br />
+        <label><input type="checkbox" checked> Code 1 hour</label>
+      </div>
+    </div>
+
+    <!-- Course Catalog -->
+    <div class="card">
+      <h3>📚 Course Catalog</h3>
+      <div class="example">
+        <select>
+          <option>Web Development (4h)</option>
+          <option>UI/UX Design (2h)</option>
+          <option>React.js (3h)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Reading Log -->
+    <div class="card">
+      <h3>📖 Reading Log</h3>
+      <div class="example">
+        <table>
+          <tr><th>Title</th><th>Rating</th></tr>
+          <tr><td>Atomic Habits</td><td>⭐⭐⭐⭐⭐</td></tr>
+          <tr><td>Deep Work</td><td>⭐⭐⭐⭐</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Markdown Note Editor -->
+    <div class="card">
+      <h3>🗒️ Markdown Notes</h3>
+      <div class="example">
+        <textarea rows="3"># Hello World 🌎</textarea>
+        <p><em>Preview:</em> <strong>Hello World 🌎</strong></p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <p>🔥 Made with Passion 🔥</p>
+      <div class="footer-icons">
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+        </a>
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+        </a>
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    const toggle = document.getElementById('mode-toggle');
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        document.body.classList.add('dark');
+      } else {
+        document.body.classList.remove('dark');
+      }
+    });
+
+    // Flashcard flip functionality
+    const flashcard = document.getElementById('flashcard');
+    flashcard.addEventListener('click', () => {
+      flashcard.classList.toggle('flipped');
+    });
+  </script>
+</body>
+</html>
